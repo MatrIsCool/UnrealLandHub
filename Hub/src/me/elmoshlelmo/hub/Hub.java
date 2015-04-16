@@ -1,5 +1,7 @@
 package me.elmoshlelmo.hub;
 
+import me.elmoshlelmo.hub.config.ConfigManager;
+import me.elmoshlelmo.hub.items.ItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -10,5 +12,21 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Hub extends JavaPlugin {
 
 
+    public static ConfigManager messageManager = new ConfigManager("messages");
+    public static ConfigManager config = new ConfigManager("config");
+    public static ConfigManager items = new ConfigManager("items");
+    public static ConfigManager book = new ConfigManager("book");
+
+    public static ItemManager itemManager = new ItemManager();
+
+
+    public void onEnable() {
+        Hub plugin = this;
+
+    }
+
+    public void onDisable() {
+
+    }
 
 }
